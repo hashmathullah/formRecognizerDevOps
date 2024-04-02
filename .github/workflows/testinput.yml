@@ -15,3 +15,8 @@ jobs:
       - name: Use the input
         run: echo "My input is ${{ steps.my_input.outputs.my_input }}"
         # Now you can use the input value in subsequent steps.
+
+      - name: Run workflow with input
+        uses: ./.github/workflows/testinput.yml
+        with:
+          my_input: 'value_here'
